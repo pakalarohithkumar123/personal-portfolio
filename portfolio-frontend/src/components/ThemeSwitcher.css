@@ -1,0 +1,55 @@
+.theme-switcher {
+  position: static;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+  padding: 6px 9px;
+  background: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 25px;
+  box-shadow: none;
+  flex-shrink: 0;
+}
+
+.theme-label {
+  color: #ffffff;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.theme-option {
+  width: 17px;
+  height: 17px;
+  padding: 0;
+  border: 2px solid transparent;
+  border-radius: 50%;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.theme-option:hover {
+  transform: scale(1.2);
+}
+
+.theme-option.active {
+  border-color: #ffffff;
+  outline: 2px solid rgba(255, 255, 255, 0.5);
+}
+
+@media (max-width: 768px) {
+  .theme-switcher {
+    gap: 5px;
+    padding: 5px 7px;
+  }
+
+  .theme-label {
+    font-size: 11px;
+  }
+
+  .theme-option {
+    width: 15px;
+    height: 15px;
+  }
+}

@@ -1,0 +1,336 @@
+.projects-page {
+  --project-primary: var(--primary, #2563eb);
+  --project-secondary: var(--secondary, #1d4ed8);
+  --project-bg: var(--page-bg, #f8fafc);
+  --project-card: var(--card-bg, #ffffff);
+  --project-text: var(--text-color, #1e293b);
+  --project-muted: var(--muted-color, #64748b);
+  --project-border: var(--border-color, #e2e8f0);
+
+  width: 100%;
+  min-height: 80vh;
+  padding: 40px 6%;
+  color: var(--project-text);
+}
+
+/* Page heading */
+
+.projects-page .section-heading {
+  text-align: center;
+  margin-bottom: 35px;
+}
+
+.projects-page .section-heading p {
+  color: var(--project-primary);
+  font-weight: 700;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+}
+
+.projects-page .section-heading h1 {
+  color: var(--project-text);
+  font-size: 38px;
+  margin: 10px 0;
+}
+
+.projects-page .section-heading div {
+  width: 65px;
+  height: 4px;
+  margin: 12px auto;
+  border-radius: 10px;
+  background: var(--project-primary);
+}
+
+/* Add project button */
+
+.projects-toolbar {
+  display: flex;
+  justify-content: flex-end;
+  margin: 20px 0 30px;
+}
+
+.add-project-btn,
+.save-project-btn {
+  padding: 12px 22px;
+  border: none;
+  border-radius: 8px;
+  background: var(--project-primary);
+  color: #ffffff;
+  font-size: 15px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.add-project-btn:hover,
+.save-project-btn:hover {
+  background: var(--project-secondary);
+  transform: translateY(-2px);
+}
+
+/* Messages */
+
+.project-message {
+  padding: 12px 16px;
+  margin-bottom: 18px;
+  border-radius: 8px;
+  font-weight: 500;
+}
+
+.project-success {
+  color: #15803d;
+  background: #dcfce7;
+}
+
+.project-error {
+  color: #b91c1c;
+  background: #fee2e2;
+}
+
+/* Add project form */
+
+.project-form {
+  display: grid;
+  gap: 15px;
+  width: 100%;
+  max-width: 650px;
+  margin: 0 auto 40px;
+  padding: 25px;
+  border: 1px solid var(--project-border);
+  border-radius: 14px;
+  background: var(--project-card);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
+}
+
+.project-form h2 {
+  color: var(--project-primary);
+  margin-bottom: 8px;
+}
+
+.project-form input,
+.project-form textarea {
+  width: 100%;
+  padding: 13px 15px;
+  border: 1px solid var(--project-border);
+  border-radius: 8px;
+  outline: none;
+  background: var(--project-bg);
+  color: var(--project-text);
+  font-size: 14px;
+  font-family: inherit;
+  transition: border-color 0.3s ease;
+}
+
+.project-form input:focus,
+.project-form textarea:focus {
+  border-color: var(--project-primary);
+}
+
+.project-form textarea {
+  resize: vertical;
+}
+
+.project-form input::placeholder,
+.project-form textarea::placeholder {
+  color: var(--project-muted);
+}
+
+.save-project-btn {
+  width: 100%;
+  margin-top: 5px;
+}
+
+.save-project-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Projects grid */
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 25px;
+  margin-top: 25px;
+}
+
+/* Project card */
+
+.projects-page .project-card {
+  display: flex;
+  flex-direction: column;
+  padding: 24px;
+  border: 1px solid var(--project-border);
+  border-radius: 15px;
+  background: var(--project-card);
+  color: var(--project-text);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease,
+    border-color 0.3s ease;
+  animation: projectFadeIn 0.5s ease;
+}
+
+.projects-page .project-card:hover {
+  transform: translateY(-7px);
+  border-color: var(--project-primary);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.1);
+}
+
+.project-image {
+  width: 100%;
+  height: 180px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+
+.project-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.project-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+  background: var(--project-primary);
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.project-top span {
+  color: var(--project-muted);
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.projects-page .project-card h2 {
+  color: var(--project-text);
+  font-size: 21px;
+  margin-bottom: 12px;
+}
+
+.projects-page .project-card p {
+  color: var(--project-muted);
+  line-height: 1.7;
+  font-size: 14px;
+}
+
+.projects-page .project-card .project-technologies {
+  margin-top: 15px;
+  color: var(--project-text);
+}
+
+.project-technologies strong {
+  color: var(--project-primary);
+}
+
+/* Project links and delete button */
+
+.project-card-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  padding-top: 22px;
+}
+
+.project-btn,
+.delete-project-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 9px 14px;
+  border: 1px solid var(--project-primary);
+  border-radius: 7px;
+  background: var(--project-primary);
+  color: #ffffff;
+  font-size: 13px;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.project-btn:hover,
+.delete-project-btn:hover:not(:disabled) {
+  background: var(--project-secondary);
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.delete-project-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Empty projects */
+
+.projects-empty {
+  text-align: center;
+  margin-top: 35px;
+  color: var(--project-muted);
+  font-size: 15px;
+}
+
+/* Animation */
+
+@keyframes projectFadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(15px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet */
+
+@media (max-width: 900px) {
+  .projects-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+  .projects-page {
+    padding: 30px 5%;
+  }
+
+  .projects-page .section-heading h1 {
+    font-size: 30px;
+  }
+
+  .projects-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .projects-toolbar {
+    justify-content: center;
+  }
+
+  .project-form {
+    padding: 18px;
+  }
+
+  .project-card-actions {
+    flex-direction: column;
+  }
+
+  .project-btn,
+  .delete-project-btn {
+    width: 100%;
+  }
+}

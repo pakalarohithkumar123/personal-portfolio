@@ -1,0 +1,41 @@
+
+# ==============================
+# FRONTEND - React + Vite
+# ==============================
+portfolio-frontend/node_modules/
+portfolio-frontend/dist/
+portfolio-frontend/.env
+portfolio-frontend/.env.*
+!portfolio-frontend/.env.example
+
+# ==============================
+# BACKEND - Spring Boot
+# ==============================
+portfolio-backend/target/
+portfolio-backend/build/
+portfolio-backend/.env
+portfolio-backend/.env.*
+!portfolio-backend/.env.example
+portfolio-backend/application-local.properties
+
+# ==============================
+# IDE FILES
+# ==============================
+.vscode/
+.idea/
+*.iml
+.classpath
+.project
+.settings/
+
+# ==============================
+# LOGS AND GENERATED FILES
+# ==============================
+*.log
+*.class
+
+# ==============================
+# OPERATING SYSTEM
+# ==============================
+.DS_Store
+Thumbs.db

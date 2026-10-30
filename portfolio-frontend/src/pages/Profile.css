@@ -1,0 +1,133 @@
+
+.public-profile {
+  width: 100%;
+  overflow: hidden;
+}
+
+.profile-share-header {
+  position: relative;
+  padding: 85px 24px;
+  text-align: center;
+  background:
+    radial-gradient(circle at 20% 20%, var(--primary), transparent 35%),
+    linear-gradient(135deg, #111827, #1e293b);
+  color: white;
+}
+
+.profile-share-content {
+  max-width: 850px;
+  margin: auto;
+}
+
+.profile-label {
+  display: inline-block;
+  margin-bottom: 16px;
+  padding: 8px 16px;
+  border: 1px solid rgba(255,255,255,.3);
+  border-radius: 30px;
+  font-size: 12px;
+  letter-spacing: 2px;
+}
+
+.profile-share-header h1 {
+  margin: 0 0 18px;
+  font-size: clamp(36px, 6vw, 64px);
+}
+
+.profile-share-header p {
+  max-width: 650px;
+  margin: auto;
+  line-height: 1.8;
+  color: #d1d5db;
+}
+
+.profile-share-actions {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 30px;
+}
+
+.profile-share-actions button,
+.profile-share-actions a,
+.profile-footer button {
+  padding: 13px 23px;
+  border: 1px solid var(--primary);
+  border-radius: 10px;
+  background: var(--primary);
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: .3s ease;
+}
+
+.profile-share-actions a {
+  background: transparent;
+}
+
+.profile-share-actions button:hover,
+.profile-share-actions a:hover,
+.profile-footer button:hover {
+  transform: translateY(-3px);
+  opacity: .85;
+}
+
+.profile-section-nav {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 30px;
+  padding: 17px;
+  background: var(--card-bg, #ffffff);
+  border-bottom: 1px solid var(--border-color, #e5e7eb);
+}
+
+.profile-section-nav a {
+  color: var(--text-color, #374151);
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.profile-section-nav a:hover {
+  color: var(--primary);
+}
+
+.profile-section {
+  scroll-margin-top: 75px;
+}
+
+.profile-footer {
+  padding: 55px 20px;
+  text-align: center;
+  background: #111827;
+  color: white;
+}
+
+.profile-footer h2 {
+  margin-bottom: 12px;
+}
+
+.profile-footer p {
+  color: #d1d5db;
+  margin-bottom: 22px;
+}
+
+@media (max-width: 600px) {
+  .profile-share-header {
+    padding: 60px 18px;
+  }
+
+  .profile-section-nav {
+    gap: 15px;
+    padding: 14px 8px;
+  }
+
+  .profile-section-nav a {
+    font-size: 13px;
+  }
+}
